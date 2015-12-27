@@ -53,6 +53,19 @@ section {
   &.sub-header {
     padding: 30px 0;
     text-transform: none;
+
+    h2 {
+      font-size: 24px;
+    }
+  }
+
+  &.item-header {
+    padding: 15px 0;
+    text-transform: none;
+
+    h2 {
+      font-size: 20px;
+    }
   }
 }
 
@@ -63,20 +76,30 @@ section {
 #portfoliolist .portfolio {
   display: inline-block;
   width: 48%;
+  height: 170px;
   margin: 1%;
   float: left;
   overflow: hidden;
 
   .portfolio-wrapper {
     .caption {
-      display: none;
+      //display: none;
+      top: 0px;
+      overflow: hidden;
+      height: 170px;
     }
 
     img {
+      //height: 170px;
+      width: 100%;
       max-width: 100%;
       position: relative;
       -webkit-filter: grayscale(0);
       filter: grayscale(0);
     }
   }
+}
+
+.item-sect {
+  
 }
