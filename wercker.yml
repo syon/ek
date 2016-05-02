@@ -22,5 +22,5 @@ deploy:
         echo "==== END: Harp compile ===="
 
     - lukevivier/gh-pages:
-        token: $GITHUB_TOKEN
+        token: $GH_TOKEN
         basedir: harp-src/www
