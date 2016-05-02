@@ -7,6 +7,7 @@ build:
         code: |
             apt-get update
             apt-get install git -y
+            echo "git version $(git --version) running"
 
     - npm-install
 
@@ -22,6 +23,7 @@ deploy:
       name: Harp compile
       code: |
         echo "==== START: Harp compile ===="
+        echo "git version $(git --version) running"
         echo "pwd: $(pwd)"
         node_modules/harp/bin/harp compile harp-src
         echo "ls harp-src: $(ls harp-src)"
