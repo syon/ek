@@ -18,14 +18,9 @@ deploy:
         echo "==== START: Harp compile ===="
         echo "pwd: $(pwd)"
         node_modules/harp/bin/harp compile harp-src
-        ls -la
+        echo "ls harp-src: $(ls harp-src)"
         echo "==== END: Harp compile ===="
 
-    - script:
-      name: Check node_modules
-      code: |
-        echo "==== START: Check node_modules ===="
-        ls -la node_modules
-        ls -la node_modules/harp
-        ls -la node_modules/harp/bin
-        echo "==== END: Check node_modules ===="
+    - lukevivier/gh-pages:
+        token: $GITHUB_TOKEN
+        basedir: harp-src/www
