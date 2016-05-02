@@ -15,7 +15,7 @@ deploy:
     - script:
       name: Harp compile
       code: |
-        echo "harp version: $(harp -v)"
-        harp compile
         pwd
         ls
+        echo "harp version: $(harp -v)"
+        node_modules/harp/bin/harp compile
