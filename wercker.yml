@@ -16,8 +16,8 @@ deploy:
       name: Harp compile
       code: |
         echo "==== START: Harp compile ===="
-        pwd
-        ls
+        echo "pwd: $(pwd)"
         echo "harp version: $(harp -v)"
         node_modules/harp/bin/harp compile harp-src
+        ls -la
         echo "==== END: Harp compile ===="
