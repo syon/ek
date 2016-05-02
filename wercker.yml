@@ -2,13 +2,6 @@ box: node:5.11-slim
 
 build:
   steps:
-    - script:
-        name: install git
-        code: |
-            apt-get update
-            apt-get install git -y
-            echo "git version $(git --version) running"
-
     - npm-install
 
     - script:
@@ -19,6 +12,13 @@ build:
 
 deploy:
   steps:
+    - script:
+        name: install git
+        code: |
+            apt-get update
+            apt-get install git -y
+            echo "git version $(git --version) running"
+
     - script:
       name: Harp compile
       code: |
